@@ -18,6 +18,12 @@ const Home = () => {
 		}
 	}
 
+	const handleRemove = (index) => {
+		console.log(index)
+		const newList = list.slice(0, index).concat(list.slice(index+1));
+		setList(newList);
+	  }
+
 	return (
 		<>
 			<div className="container w-75 d-flex justify-content-center py-5">
@@ -30,7 +36,7 @@ const Home = () => {
 							return (<div onMouseOver={() => setHoveringIndex(index)} onMouseLeave={() => setHoveringIndex(null)} className="list-group-item d-flex justify-content-start row bg-light" key={index}>
 										{hoveringIndex === index ? 
 										<><li className="col-11 bg-light"><strong className="text-capitalize text-secondary">{task}</strong></li>
-										<span className="col-1 bg-light"><strong className="badge bg-danger rounded-pill ">X</strong></span></>
+										<span className="col-1 bg-light" onClick={() => handleRemove(index)}><strong className="badge bg-danger rounded-pill ">X</strong></span></>
 										:
 										<li className="col-11 bg-light"><strong className="text-capitalize text-secondary">{task}</strong></li>}
 									</div>
