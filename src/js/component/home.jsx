@@ -33,7 +33,7 @@ const Home = () => {
 					<ul className="list-group list-group-flush list-unstyled p-0 mb-0 bg-light">
 						{list.length < 1 ? <p className="ms-3 mt-2 mb-1"><strong className="text-capitalize text-secondary">No tasks! Add a task, idiot...</strong></p> : 
 							list.map((task, index) => {
-							return (<div onMouseOver={() => setHoveringIndex(index)} onMouseLeave={() => setHoveringIndex(null)} className="list-group-item d-flex justify-content-start row bg-light" key={index}>
+							return (<div key={index} onMouseOver={() => setHoveringIndex(index)} onMouseLeave={() => setHoveringIndex(null)} className="list-group-item d-flex justify-content-start row bg-light">
 										{hoveringIndex === index ? 
 										<><li className="col-11 bg-light"><strong className="text-capitalize text-secondary">{task}</strong></li>
 										<span type="button" className="col-1 bg-light" onClick={() => handleRemove(index)}><strong className="badge bg-danger rounded-pill ">X</strong></span></>
