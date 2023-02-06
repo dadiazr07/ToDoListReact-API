@@ -35,10 +35,10 @@ const Home = () => {
 							list.map((task, index) => {
 							return (<div key={index} onMouseOver={() => setHoveringIndex(index)} onMouseLeave={() => setHoveringIndex(null)} className="list-group-item d-flex justify-content-start row bg-light">
 										{hoveringIndex === index ? 
-										<><li className="col-11 bg-light"><strong className="text-capitalize text-secondary">{task}</strong></li>
+										<><li className="col-11 bg-light"><strong className="text-capitalize text-secondary">{task}.</strong></li>
 										<span type="button" className="col-1 bg-light" onClick={() => handleRemove(index)}><strong className="badge bg-danger rounded-pill ">X</strong></span></>
 										:
-										<li className="col-11 bg-light"><strong className="text-capitalize text-secondary">{task}</strong></li>}
+										<li className="col-11 bg-light"><strong className="text-capitalize text-secondary">{task}.</strong></li>}
 									</div>
 									)})}
 					</ul>
