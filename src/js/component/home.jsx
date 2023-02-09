@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
@@ -19,10 +19,9 @@ const Home = () => {
 	}
 
 	const handleRemove = (index) => {
-		console.log(index)
 		const newList = list.slice(0, index).concat(list.slice(index+1));
 		setList(newList);
-	  }
+	}
 
 	return (
 		<>
@@ -42,7 +41,6 @@ const Home = () => {
 									</div>
 									)})}
 					</ul>
-
 					<p className="text-capitalize text-secondary bg-light">{list.length < 2 ? (list.length > 0 ? `${list.length} stuff left to do...` : `Looks like you don't have a life...`) :  `${list.length} "interesting" tasks left...`}</p>
 				</div>
 			</div>
