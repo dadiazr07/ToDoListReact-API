@@ -51,11 +51,14 @@ const Home = () => {
 		  .catch(error => console.error(error));
 	}
 
-	
-	useEffect(() =>{
+
+	useEffect(()=>{
 		getData()
-		putData()
-	}, []);
+	},[])
+
+	// useEffect(()=>{
+	// 	putData()
+	// },[handleEnter, handleRemove])
 
 
 	return (
