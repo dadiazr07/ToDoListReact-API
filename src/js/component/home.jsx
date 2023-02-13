@@ -56,9 +56,9 @@ const Home = () => {
 		getData()
 	},[])
 
-	// useEffect(()=>{
-	// 	putData()
-	// },[handleEnter, handleRemove])
+	useEffect(()=>{
+		putData()
+	},[handleEnter, handleRemove])
 
 
 	return (
